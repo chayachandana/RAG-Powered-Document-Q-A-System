@@ -17,3 +17,4 @@ sentence-transformers
 faiss-cpu
 Flask==3.0.3
 langchain-huggingface
+langchain-groq
