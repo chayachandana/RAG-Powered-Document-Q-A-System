@@ -69,5 +69,6 @@ for q in questions:
     print(f"Question: {q}")
     answer = chain.invoke(q)
     print(f"Answer: {answer}")
-    print("-"*40)   
+    print("-"*40)
+       
 # %%
