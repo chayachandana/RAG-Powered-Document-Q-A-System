@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+langchain
+langchain-community
+langchain-core
+langchain-text-splitters
+python-dotenv
+pydantic
+tqdm
+requests
+numpy
+pandas
+scikit-learn
+torch
+transformers
+sentence-transformers
+faiss-cpu
