@@ -15,7 +15,7 @@ docs = loader.load()
 print(f"Loaded {len(docs)} pages from PDF")
 
 # Split into chunks
-splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
+splitter = RecursiveCharacterTextSplitter(chunk_size=300, chunk_overlap=100)
 chunks = splitter.split_documents(docs)
 print(f"Split into {len(chunks)} chunks")
 
