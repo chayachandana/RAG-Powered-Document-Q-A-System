@@ -1,0 +1,108 @@
+{
+  "accuracy": "90.0%",
+  "passed": 9,
+  "failed": 1,
+  "results": [
+    {
+      "question": "Where did this person work?",
+      "answer": "Based on the provided context, this person worked at:\n\n1. George Washington University (as an ML/AI Engineer)\n2. George Washington University Law School (as a Machine Learning Engineer and Student Technical Assistant) \n\nNote: The context also mentions collaboration with backend engineering teams, but it does not specify the company or organization they worked for in that capacity.",
+      "matched_keywords": [
+        "george washington",
+        "university"
+      ],
+      "score": 0.67,
+      "passed": true
+    },
+    {
+      "question": "What is this person's educational background?",
+      "answer": "This person's educational background includes a Bachelor's of Computer Applications from Dayananda Sagar University, Bangalore, India, which they attended from June 2018 to September 2021. They also have experience at George Washington University Law School, but it appears to be related to their work experience as a Machine Learning Engineer (Student Technical Assistant) rather than a degree program.",
+      "matched_keywords": [
+        "bachelor"
+      ],
+      "score": 0.33,
+      "passed": false
+    },
+    {
+      "question": "What deep learning models has this person used?",
+      "answer": "This person has used the following deep learning models: \n\n1. LSTM (Long Short-Term Memory)\n2. GRU (Gated Recurrent Unit)\n3. Transformer-based models \n4. FNN (Feedforward Neural Network)",
+      "matched_keywords": [
+        "lstm",
+        "gru",
+        "transformer"
+      ],
+      "score": 1.0,
+      "passed": true
+    },
+    {
+      "question": "What cloud platforms has this person worked with?",
+      "answer": "Based on the provided context, this person has worked with the following cloud platforms: \n\n1. AWS (including S3 and SageMaker)\n2. GCP (Google Cloud Platform)\n3. Databricks",
+      "matched_keywords": [
+        "aws",
+        "gcp",
+        "databricks"
+      ],
+      "score": 1.0,
+      "passed": true
+    },
+    {
+      "question": "What programming languages does this person know?",
+      "answer": "Based on the provided context, this person knows the following programming languages: \n\n1. Python\n2. SQL\n3. C\n4. C++",
+      "matched_keywords": [
+        "python",
+        "sql"
+      ],
+      "score": 1.0,
+      "passed": true
+    },
+    {
+      "question": "What is this person's experience with anomaly detection?",
+      "answer": "This person has experience with anomaly detection, specifically:\n\n1. Developing automated anomaly detection logic with precision-recall trade-off analysis to identify abnormal access patterns, which reduced manual troubleshooting by 30%.\n2. Designing and implementing an anomaly detection framework on high-volume transactional data (1M+ records/day), which reduced operational downtime by 30%.\n3. Engineering temporal and behavioral features to improve model separability in anomaly detection.\n4. Training and evaluating Isolation Forest and gradient-boosted models for anomaly detection, and calibrating thresholds using precision-recall trade-off analysis to reduce false positives by 25% while maintaining high detection sensitivity.",
+      "matched_keywords": [
+        "anomaly",
+        "isolation forest"
+      ],
+      "score": 0.67,
+      "passed": true
+    },
+    {
+      "question": "What frameworks does this person use?",
+      "answer": "This person uses the following frameworks and tools: \n\n1. PyTorch\n2. TensorFlow\n3. Scikit-learn\n4. XGBoost\n5. Pandas\n6. NumPy\n7. MLflow\n8. Git\n9. Flask\n10. Docker \n\nAdditionally, they have experience with cloud platforms such as AWS (S3, SageMaker) and GCP, as well as Databricks.",
+      "matched_keywords": [
+        "pytorch",
+        "tensorflow",
+        "scikit"
+      ],
+      "score": 1.0,
+      "passed": true
+    },
+    {
+      "question": "What is this person's name?",
+      "answer": "Chaya Chandana Doddaiggaluru Appajigowda",
+      "matched_keywords": [
+        "chaya"
+      ],
+      "score": 1.0,
+      "passed": true
+    },
+    {
+      "question": "What deployment tools does this person know?",
+      "answer": "This person knows the following deployment tools: \n1. Flask\n2. REST APIs\n3. Docker\n4. AWS (S3, SageMaker)\n5. Model Serving \n6. Distributed Training \n7. Monitoring \n8. Logging",
+      "matched_keywords": [
+        "docker",
+        "flask",
+        "api"
+      ],
+      "score": 1.0,
+      "passed": true
+    },
+    {
+      "question": "What is RAG and has this person worked with it?",
+      "answer": "RAG is mentioned in the context, but its meaning is not explicitly defined. However, based on the provided information, it appears that RAG is related to Transformer Architectures, and this person has listed it as one of their skills or areas of expertise, alongside other terms like RLHF, Reward Modeling, and Embeddings. Therefore, it can be inferred that this person has likely worked with RAG, but the specific details of their experience with it are not provided.",
+      "matched_keywords": [
+        "rag"
+      ],
+      "score": 0.5,
+      "passed": true
+    }
+  ]
+}
