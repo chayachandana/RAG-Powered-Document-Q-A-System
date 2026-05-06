@@ -30,5 +30,4 @@ db = FAISS.from_documents(chunks, embeddings)
 db.save_local("faiss_index")
 
 print("Done! faiss_index folder created successfully.")
-
 # %%
