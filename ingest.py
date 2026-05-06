@@ -9,7 +9,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 
-pdf_folder = "data"
+pdf_folder = "resumes"
 all_docs = []
 
 for filename in os.listdir(pdf_folder):
