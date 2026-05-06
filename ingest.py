@@ -9,10 +9,20 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 
-# Load your PDF
-loader = PyPDFLoader("data/Chaya_Chandana_Doddaiggaluru_Appajigowda.pdf")
-docs = loader.load()
-print(f"Loaded {len(docs)} pages from PDF")
+pdf_folder = "data"
+all_docs = []
+
+for filename in os.listdir(pdf_folder):
+    if filename.endswith(".pdf"):
+        print(f"Loading {filename}...")
+        loader = PyPDFLoader(os.path.join(pdf_folder, filename))
+        docs = loader.load()
+        # Tag each chunk with which resume it came from
+        for doc in docs:
+            doc.metadata["source_file"] = filename
+        all_docs.extend(docs)
+
+print(f"Loaded {len(all_docs)} pages total from {pdf_folder}")
 
 # Split into chunks
 splitter = RecursiveCharacterTextSplitter(chunk_size=300, chunk_overlap=100)
