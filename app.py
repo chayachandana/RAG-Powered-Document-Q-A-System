@@ -1,5 +1,6 @@
 #%%
 import os
+import webbrowser
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -435,4 +436,5 @@ def chat_ui():
     '''
 
 if __name__ == "__main__":
+    webbrowser.open("http://localhost:8080/chat")
     app.run(debug=True, port=8080)
