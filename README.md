@@ -4,7 +4,7 @@ A production-ready document intelligence system that lets you query multiple res
 
 Built to solve a real retrieval problem: standard FAISS similarity search systematically favors longer documents over shorter ones in multi-document corpora. This system fixes that with a per-file chunk grouping strategy that ensures every resume gets equal representation in the context window.
 
-**Live Demo:** [link]
+**Live API:** [https://rag-powered-document-q-a-system-production.up.railway.app]
 
 ---
 
@@ -178,46 +178,49 @@ Education section answers were failing because degree information was split acro
 
 ---
 
-## ☁️ Deploy to Render (Free)
+## ☁️ Deployed on Railway
 
-### 1. Add a Procfile to your repo
-Create a file called `Procfile` (no extension) in the root:
-```
-web: python app.py
+The backend API is live. Test it instantly without running anything locally.
+
+### Test with curl
+```bash
+curl -X POST https://rag-powered-document-q-a-system-production.up.railway.app/ask \
+  -H "Content-Type: application/json" \
+  -d '{"question": "Who has machine learning experience?"}'
 ```
 
-### 2. Update app.py port for Render
-Find the last line in `app.py` and replace with:
+### Test with Postman
+1. Download **Postman** at [postman.com](https://postman.com) — free
+2. Click **New Request**
+3. Change **GET → POST**
+4. URL: `https://rag-powered-document-q-a-system-production.up.railway.app/ask`
+5. Click **Body → raw → JSON**
+6. Paste:
+```json
+{
+  "question": "Who has machine learning experience?"
+}
+```
+7. Click **Send**
+
+### Deploy your own instance
+1. Fork this repo
+2. Go to [railway.app](https://railway.app) → 
+3. Connect your forked repo
+4. Add environment variable: `GROQ_API_KEY` = your key
+5. Commit your `faiss_index/` folder so it ships with the code:
+```bash
+git add faiss_index/
+git commit -m "add faiss index for deployment"
+git push
+```
+1. Make sure the last line of `app.py` reads:
 ```python
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
     app.run(host="0.0.0.0", port=port)
 ```
-
-### 3. Deploy on Render
-1. Go to [render.com](https://render.com) and sign up free
-2. Click **New → Web Service**
-3. Connect your GitHub repo
-4. Set these values:
-   - **Build Command:** `pip install -r requirements.txt`
-   - **Start Command:** `python app.py`
-5. Add environment variable: `GROQ_API_KEY` = your key
-6. Click **Deploy**
-
-> ⚠️ **Note on FAISS index:** Render's free tier doesn't persist files between deploys. You have two options:
-> - **Option A (easiest):** Commit your `faiss_index/` folder to GitHub so it deploys with the code
-> - **Option B (cleaner):** Add a build step that runs `python ingest.py` automatically before starting
-
-### Commit faiss_index to GitHub (Option A)
-```bash
-# Remove faiss_index from .gitignore if it's there
-# Then add and commit it
-git add faiss_index/
-git commit -m "add faiss index for deployment"
-git push
-```
-
----
+Railway auto-detects Python and deploys automatically.
 
 ## 🔑 Environment Variables
 
