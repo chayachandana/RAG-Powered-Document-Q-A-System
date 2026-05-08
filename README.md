@@ -239,4 +239,4 @@ MIT — use freely, attribution appreciated.
 ## 🙋 Author
 
 **Chaya Chandana Doddaiggaluru Appajigowda**
-[LinkedIn](your-linkedin-url) · [GitHub](https://github.com/chayachandana)
+[LinkedIn](https://www.linkedin.com/in/chayachandana/) · [GitHub](https://github.com/chayachandana)
